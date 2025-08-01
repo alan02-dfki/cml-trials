@@ -7,9 +7,9 @@ my_task = Task.init(
 )
 
 if __name__ == "__main__":
-    my_task.execute_remotely(
-        queue_name="default",  # type: Optional[str]
-        clone=False,  # type: bool
-        exit_process=True,  # type: bool
-    )
+    # my_task.execute_remotely(
+    #     queue_name="default",  # type: Optional[str]
+    #     clone=False,  # type: bool
+    #     exit_process=True,  # type: bool
+    # )
     print("Hello World!")
