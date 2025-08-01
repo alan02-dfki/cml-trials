@@ -1,4 +1,4 @@
-from src.other_module import some_helper_function
+from src.subpackage.other_module import some_helper_function
 from clearml import Task
 
 
