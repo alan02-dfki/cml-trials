@@ -1,2 +1,2 @@
-def some_helper_function(name: str):
-    print(f"Hello {name}, from another module!")
+def the_actual_business_logic(name: str):
+    print(f"Hello {name}, Your import has been resolved!")

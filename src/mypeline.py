@@ -1,4 +1,4 @@
-from src.subpackage.other_module import some_helper_function
+from src.subpackage.other_module import the_actual_business_logic
 from clearml import Task
 
 
@@ -8,10 +8,12 @@ my_task = Task.init(
 )
 
 if __name__ == "__main__":
+    print("This is visible on both the local and the remote machine!")
     my_task.execute_remotely(
         queue_name="default",
         clone=False,
         exit_process=True,
     )
-    print("Hello World!")
-    some_helper_function("main task")
+    print("This is only visible the remote machine!")
+
+    the_actual_business_logic("main task")
