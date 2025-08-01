@@ -1,3 +1,4 @@
+from src.other_module import some_helper_function
 from clearml import Task
 
 
@@ -7,9 +8,10 @@ my_task = Task.init(
 )
 
 if __name__ == "__main__":
-    # my_task.execute_remotely(
-    #     queue_name="default",  # type: Optional[str]
-    #     clone=False,  # type: bool
-    #     exit_process=True,  # type: bool
-    # )
+    my_task.execute_remotely(
+        queue_name="default",
+        clone=False,
+        exit_process=True,
+    )
     print("Hello World!")
+    some_helper_function("main task")
